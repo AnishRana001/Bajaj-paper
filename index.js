@@ -191,7 +191,7 @@ app.post("/bfhl", async (req, res) => {
     return res.status(400).json({ is_success: false });
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
